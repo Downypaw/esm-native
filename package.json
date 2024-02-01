@@ -1,0 +1,29 @@
+{
+  "name": "esm-native",
+  "version": "1.0.0",
+  "description": "Check modern ESM native opportunities in a small web application",
+  "private": true,
+  "scripts": {
+    "build": "npm run clean && npm run build:x",
+    "build:x": "",
+    "watch:x": "npm run build:x -- --watch",
+    "clean": "npx rimraf dist",
+    "format": "npm run format:prettier",
+    "format:prettier": "npm run lint:prettier -- --write",
+    "lint": "npm run lint:prettier && npm run lint:typescript",
+    "lint:prettier": "prettier \"**/*.{json,md,js,ts,[jt]sx,[cm][jt]s}\" --check",
+    "lint:typescript": "tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.18",
+    "npm": ">= 9"
+  }
+}
