@@ -4,9 +4,9 @@
   "description": "Check modern ESM native opportunities in a small web application",
   "private": true,
   "scripts": {
-    "build": "npm run clean && npm run build:x",
-    "build:x": "",
-    "watch:x": "npm run build:x -- --watch",
+    "build": "npm run clean && npm run build:babel",
+    "build:babel": "babel src --out-dir dist --copy-files --extensions .ts,.tsx",
+    "watch:babel": "npm run build:babel -- --watch",
     "clean": "npx rimraf dist",
     "format": "npm run format:prettier",
     "format:prettier": "npm run lint:prettier -- --write",
@@ -16,14 +16,28 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@babel/cli": "7.23.9",
+    "@babel/core": "7.24.0",
+    "@babel/preset-react": "7.24.1",
+    "@babel/preset-typescript": "7.23.3",
+    "@emotion/babel-plugin": "11.11.0",
+    "@types/react": "18.2.73",
+    "@types/react-dom": "18.2.22",
+    "babel-plugin-transform-inline-environment-variables": "0.4.4",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.3.3"
+    "rimraf": "5.0.5",
+    "typescript": "5.3.3"
   },
   "engines": {
     "node": ">=18.18",
     "npm": ">= 9"
+  },
+  "dependencies": {
+    "@emotion/css": "11.11.2",
+    "@emotion/react": "11.11.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }

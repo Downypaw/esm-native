@@ -12,6 +12,20 @@
     <!-- scripts -->
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <script type="importmap">
+        {
+          "imports": {
+            "react": "https://cdn.skypack.dev/react@18.2.0",
+            "react-dom/client": "https://esm.sh/v128/react-dom@18.2.0/es2021/client.js",
+            "@emotion/css": "https://esm.sh/v128/@emotion/css@11.11.2/es2022/css.mjs"
+          }
+        }
+      </script>
+      <link type="modulepreload" src="https://cdn.skypack.dev/react@18.2.0" />
+      <link type="modulepreload" src="https://esm.sh/v128/react-dom@18.2.0/es2021/client.js" />
+      <link type="modulepreload" src="https://esm.sh/v128/@emotion/css@11.11.2/es2022/css.mjs" />
+      <script type="module" src="scripts/index.js" />
+    </div>
   </body>
 </html>

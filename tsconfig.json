@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+    "target": "ES6",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     /* Interop Constraints */
     "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
     "esModuleInterop": false /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
@@ -9,6 +13,9 @@
     "strict": true /* Enable all strict type-checking options. */,
 
     /* Completeness */
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "types": ["@emotion/react/types/css-prop"],
+    // "allowImportingTsExtensions": true,
+    // "noEmit": true,
+  },
 }
