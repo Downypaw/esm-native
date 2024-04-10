@@ -2,6 +2,5 @@
   "presets": [
     ["@babel/preset-typescript", { "isTSX": true, "allExtensions": true }],
     ["@babel/preset-react"]
-  ],
-  "plugins": ["transform-inline-environment-variables", "@emotion/babel-plugin"]
+  ]
 }

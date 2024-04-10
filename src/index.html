@@ -10,22 +10,21 @@
     <meta name="color-scheme" content="dark light" />
     <link rel="stylesheet" href="style.css" />
     <!-- scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/stable/react@18.2.0/es2022/react.mjs",
+          "react-dom/client": "https://esm.sh/v128/react-dom@18.2.0/es2022/client.js",
+          "@emotion/css": "https://esm.sh/v128/@emotion/css@11.11.2/es2022/css.mjs"
+        }
+      }
+    </script>
+    <link type="modulepreload" src="https://esm.sh/stable/react@18.2.0/es2022/react.mjs" />
+    <link type="modulepreload" src="https://esm.sh/v128/react-dom@18.2.0/es2022/client.js" />
+    <link type="modulepreload" src="https://esm.sh/v128/@emotion/css@11.11.2/es2022/css.mjs" />
   </head>
   <body>
-    <div id="app">
-      <script type="importmap">
-        {
-          "imports": {
-            "react": "https://cdn.skypack.dev/react@18.2.0",
-            "react-dom/client": "https://esm.sh/v128/react-dom@18.2.0/es2021/client.js",
-            "@emotion/css": "https://esm.sh/v128/@emotion/css@11.11.2/es2022/css.mjs"
-          }
-        }
-      </script>
-      <link type="modulepreload" src="https://cdn.skypack.dev/react@18.2.0" />
-      <link type="modulepreload" src="https://esm.sh/v128/react-dom@18.2.0/es2021/client.js" />
-      <link type="modulepreload" src="https://esm.sh/v128/@emotion/css@11.11.2/es2022/css.mjs" />
-      <script type="module" src="scripts/index.js" />
-    </div>
+    <div id="app"></div>
+    <script type="module" src="scripts/index.js" />
   </body>
 </html>
